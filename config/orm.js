@@ -19,7 +19,7 @@ var o2s = (ob) => {
         var value = ob[key];
 
         if (Object.hasOwnProperty.call(ob, key)) {
-            
+
             if (typeof value === 'string' && value.indexOf(' ') >= 0) {
                 value = "'" + value + "'";
             }
@@ -30,9 +30,14 @@ var o2s = (ob) => {
 }
 
 module.exports = {
-    
+
     selectAll: (input, cb) => {
-        
+        var query = 'select * from ' + input + ';';
+        Con.query(query, (err, res) => {
+            if (err) throw err;
+            //CALLBACK THE RESULT
+            cb(res)
+        })
     },
 
     insertOne: (table, cols, vals, cb) => {
@@ -40,6 +45,6 @@ module.exports = {
     },
 
     updateOne: (table, objColVals, condition, cb) => {
-        
+
     }
 }
