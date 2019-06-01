@@ -1,0 +1,24 @@
+{
+  "name": "handlebarsburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "(server.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbub27/HandlebarsBurger.git"
+  },
+  "author": "Kaleb Merriman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbub27/HandlebarsBurger/issues"
+  },
+  "homepage": "https://github.com/kbub27/HandlebarsBurger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
