@@ -41,7 +41,17 @@ module.exports = {
     },
 
     insertOne: (table, cols, vals, cb) => {
+        var query  = 'insert into ' + table;
+        query += cols.toString();
+        query += ') ';
+        query += 'values (';
+        query += printQs(vals.length);
+        query += ') ';
 
+        Con.query(query, vals, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
     },
 
     updateOne: (table, objColVals, condition, cb) => {
