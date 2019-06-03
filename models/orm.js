@@ -1,4 +1,4 @@
-var Con = require('./connection.js');
+var Con = require('../config/connection.js');
 
 // FUNCTION TO GET QUESTION MARKS INTO A STRING
 var printQs = (num) => {
