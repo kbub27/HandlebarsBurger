@@ -1,4 +1,4 @@
-USE burger_db;
+USE burgerdb;
 
 CREATE TABLE burgers
 (
