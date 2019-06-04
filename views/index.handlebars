@@ -10,7 +10,7 @@
 	<div class="col-sm-6 col-12">
 		<h4>Made Burgers</h4>
 
-		<ol class="pl">
+		<ol class="list-group">
 			{{#each burgers}}
 			{{#unless devoured}}
 			{{> burgers/burger-block devour=true}}
@@ -22,7 +22,7 @@
 	<div class="col-sm-6 col-12">
 		<h4>Devoured Burgers</h4>
 
-		<ul>
+		<ul class="list-group">
 			{{#each burgers}}
 			{{#if devoured}}
 			{{> burgers/burger-block devour=false}}
